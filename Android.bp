@@ -1,5 +1,5 @@
 package {
-    default_applicable_licenses: ["external_pffft_license"],
+    default_applicable_licenses: ["external_pffft_axion_license"],
 }
 
 // Added automatically by a large-scale-change that took the approach of
@@ -20,7 +20,7 @@ package {
 //   SPDX-license-identifier-GPL
 // See: http://go/android-license-faq
 license {
-    name: "external_pffft_license",
+    name: "external_pffft_axion_license",
     visibility: [":__subpackages__"],
     license_kinds: [
         "SPDX-license-identifier-Apache-2.0",
@@ -33,7 +33,7 @@ license {
 }
 
 cc_library_static {
-    name: "libpffft",
+    name: "libpffft-axion",
     // vendor needed for libpreprocessing effects.
     vendor_available: true,
     srcs: [
@@ -44,10 +44,6 @@ cc_library_static {
     export_include_dirs: ["."],
     host_supported: true,
     visibility: [
-        "//external/webrtc:__subpackages__",
-        "//frameworks/av/media/libaudioclient/tests",
-        "//hardware/interfaces/audio/aidl/vts",
-        "//vendor:__subpackages__",
         "//packages/apps/AxionFx:__subpackages__",
         "//external/steam-audio:__subpackages__",
     ],
